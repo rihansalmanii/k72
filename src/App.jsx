@@ -1,22 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import Projects from './Pages/Projects'
-import Agence from './Pages/Agence'
+import Agence from './pages/Agence'
+import Projects from './pages/Projects'
 
 
 
-function App() {
- 
-
+const App = () => {
   return (
-    <div>
+    <div className=''>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/projects' element={<Projects />} />
         <Route path='/agence' element={<Agence />} />
+        <Route path='/projects' element={<Projects />} />
       </Routes>
     </div>
   )
