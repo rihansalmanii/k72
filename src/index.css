@@ -10,3 +10,37 @@
     font-family: font2;
     src: url(./assets/fonts/Lausanne-500.woff2);
 }
+
+.moveX {
+  animation: expandHeight 1s ease forwards, moveAnimation 10s linear infinite;
+  animation-delay: 0s, 1s; /* expand first, then start moving */
+}
+
+.moveLink {
+    opacity: 0;
+}
+
+.link:hover .moveLink {
+    opacity: 1;
+    height: 100%;
+    transition: all ease 0.3s;
+}
+
+@keyframes expandHeight {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes moveAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+

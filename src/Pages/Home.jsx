@@ -2,10 +2,14 @@ import React from "react";
 import HomeTopText from "../components/Home/HomeTopText";
 import HomeBottom from "../components/Home/HomeBottom";
 import Video from "../components/Home/Video";
+// import Navbar from "../components/Navigation/Navbar";
+
+
 
 const Home = () => {
   return (
-   <div className='text-white'>
+    <div className='text-white absolute top-0'>
+      
       <div className='h-screen w-screen fixed'>
         <Video className="" />
       </div>
