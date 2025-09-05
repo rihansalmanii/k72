@@ -3,6 +3,8 @@ import React, { useRef } from "react";
 const Navbar = () => {
 
   const navAnimationRef = useRef(null)
+  const barColorRef1 = useRef(null)
+  const barColorRef2 = useRef(null)
 
   return (
     <div className="absolute  top-0 left-0 w-full z-50 text-white  flex items-start justify-between">
@@ -21,12 +23,19 @@ const Navbar = () => {
       </div>
       <div onMouseEnter={() => {
         navAnimationRef.current.style.height = '100%'
+        barColorRef1.current.style.backgroundColor = 'black'
+        barColorRef2.current.style.backgroundColor = 'black'
       }}
       onMouseLeave={() => {
         navAnimationRef.current.style.height = '0%'
+        barColorRef2.current.style.backgroundColor = 'white'
+        barColorRef1.current.style.backgroundColor = 'white'
       }} className="h-14 w-[16vw] relative bg-black">
         <div ref={navAnimationRef} className="h-0 transition-all w-full absolute top-0 bg-[#D3FD50]"></div>
-        <div className="relative  "></div>
+        <div className="relative flex flex-col justify-center items-end gap-1.5 p-5">
+          <div ref={barColorRef1} className="w-16 h-0.5 bg-white"></div>
+          <div ref={barColorRef2} className="w-10 h-0.5 bg-white"></div>
+        </div>
       </div>
     </div>
   );
